@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
-
 app = FastAPI(
     title="API de prueba",
     description="API sencilla para practicar pruebas automáticas con pytest.",
