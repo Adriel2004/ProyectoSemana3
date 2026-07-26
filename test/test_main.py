@@ -24,5 +24,5 @@ def test_predict_valid_error():
         "/predict",
         json={"input": "becas"}
     )
-    assert response.status_code == 202
+    assert response.status_code == 200
     assert "result" in response.json()
