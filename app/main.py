@@ -62,3 +62,12 @@ def predict(payload: PredictRequest) -> PredictResponse:
     )
 
     return PredictResponse(result=result)
+
+
+@app.get("/doble/{numero}")
+def calcular_doble(numero: int) -> dict[str, int]:
+    """
+    Calcula el doble de un número.
+    - **numero**: valor entero a duplicar
+    """
+    return {"numero_original": numero, "doble": numero * 2}
