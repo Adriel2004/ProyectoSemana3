@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
 app = FastAPI(
-    title="API de prueba",
-    description="API sencilla para practicar pruebas automáticas con pytest.",
+    title="API de ejemplo para CI/CD",
+    description="Proyecto educativo para probar GitHub Actions sin Docker.",
     version="1.0.0",
 )
 
@@ -44,9 +44,6 @@ def health() -> dict[str, str]:
 def predict(payload: PredictRequest) -> PredictResponse:
     """
     Procesa una consulta simple y devuelve una respuesta simulada.
-
-    Más adelante, esta función puede conectarse con un modelo de IA,
-    una base de datos o un servicio externo.
     """
     normalized_input = payload.input.strip().lower()
 
